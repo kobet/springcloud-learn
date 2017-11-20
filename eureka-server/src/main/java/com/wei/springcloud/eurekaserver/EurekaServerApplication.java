@@ -1,4 +1,4 @@
-package com.wei.springcloud.eurekaserver;
+	package com.wei.springcloud.eurekaserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
