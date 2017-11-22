@@ -5,15 +5,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.wei.springcloud.eurekaribbon.service.ComputeService;
+
 @RestController
 public class RibbonController {
 	
 	@Autowired
-	private RestTemplate restTemplate;
+	private ComputeService computeService;
 	
 	@RequestMapping("/add")
 	public String ribbon() {
-		return restTemplate.getForEntity("http://compute-service/add?a=10&b=20", String.class).getBody();
+		return computeService.addService();
 	}
 
 }
